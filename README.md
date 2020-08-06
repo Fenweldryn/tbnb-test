@@ -1,4 +1,4 @@
-# TurnoverBnB - Fullstack teste
+# TurnoverBnB - Fullstack
 ### O projeto será a criação de um sistema de controle de estoque.
 
 <b>O sistema deverá contar com as seguintes funcionalidades:</b>
