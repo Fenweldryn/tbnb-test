@@ -7,7 +7,7 @@
 * Remover um produto
 * Atualizar os dados do produto
 * Visualizar a lista dos produtos
-* Histórico de adição/remoção daquele produto (um gráfico exibindo a variação do produto ao longo do tempo)
+* Histórico de adição/remoção daquele produto (uma tabela exibindo a variação do produto ao longo do tempo)
 * Adição em massa (nesta tela o usuário estará apto a fazer a adição de vários itens de uma só vez, sem a necessidade de salvar item a item)
 
 ## Como submeter o projeto:
