@@ -17,7 +17,11 @@ Enviar um email para joao@turnoverbnb.com com o link para o repositório do proj
 ### O projeto deverá ser feito utilizando as seguintes tecnologias:
 
 <p>Laravel 6.x >= </br>
-VueJS 2.x >=</p>
+Em caso de teste para web
+VueJS 2.x >= </br>
+Em caso de teste para mobile
+React Native with expo SDK 37 >=
+</p>
 
 ### Será avaliado a qualidade do código assim como as decisões sobre a distribuição das responsabilidades ao redor das classes/componentes utilizados
 
