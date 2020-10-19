@@ -17,9 +17,9 @@ Send an email to joao@turnoverbnb.com with the link of your repository
 ### The project must be done using the following technologies
 
 <p>Laravel 6.x >= </br>
-In case of web test
+In case of web test</br>
 VueJS 2.x >= </br>
-In case of mobile test
+In case of mobile test</br>
 React Native with expo SDK 37 >=
 </p>
 
