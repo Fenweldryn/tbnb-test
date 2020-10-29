@@ -7,8 +7,14 @@
 * Delete a product
 * Update the product data
 * Show product data
-* History of product quantity (show the product data by time)
+* History of product quantity (show the product quantity by time)
 * Bulk update feature (Update/create more than one product at the same time)
+
+## The product model must contain at least these attributes:
+* Name
+* Unique identifier
+* Price
+* Quantity
 
 ## How to submit:
 Send an email to joao@turnoverbnb.com with the link of your repository
