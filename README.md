@@ -37,3 +37,4 @@ React Native with expo SDK 37 or later</br>
 * Backend tests
 * UI framework like vuetify, vue-bootstrap or etc
 * Application deployment
+
