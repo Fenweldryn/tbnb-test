@@ -1,0 +1,11 @@
+models:
+  Product:
+    name: string(100)
+    price: decimal(10,2)
+    quantity: integer
+
+  ProductLog:
+    product_id: foreign id
+    quantity: integer
+
+Seeder: Product
