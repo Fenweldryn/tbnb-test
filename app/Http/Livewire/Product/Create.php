@@ -2,20 +2,21 @@
 
 namespace App\Http\Livewire\Product;
 
-use Livewire\Component;
 use App\Models\Product;
+use Livewire\Component;
 use App\Models\ProductLog;
+use Illuminate\Http\Request;
 
 class Create extends Component
 {
-    public $name = null;
-    public $price = null;
-    public $quantity = null;
+    public $products = [];    
+    public $numberOfProductForms = 1;
 
     protected $rules = [
-        'name' => 'required|min:3',
-        'price' => 'required|min:1',
-        "quantity" => "required|min:1"
+        'products' => 'required|array',
+        'products.*.name' => 'required_with:products.*|min:3',
+        'products.*.price' => 'required_with:products.*|min:1',
+        'products.*.quantity' => 'required_with:products.*|min:1'
     ];
 
     public function render()
@@ -23,13 +24,23 @@ class Create extends Component
         return view('livewire.product.create');
     }
 
-    public function submit()
+    public function submit(Request $request)
     {
-        $validated = $this->validate();
+        $validatedProducts = $this->validate()['products'];
+        foreach ($validatedProducts as $product) 
+        {
+            if (!empty($product)) {
+                Product::create($product);                   
+            }
+        }
 
-        $product = Product::create($validated);       
-
-        session()->flash('success', 'Product created successfuly.');
+        session()->flash('success', 'Product(s) created successfuly.');
         $this->reset();
+    }
+
+    public function addProductForm()
+    {
+        $this->numberOfProductForms++;
+        $this->products[$this->numberOfProductForms] = [];
     }
 }

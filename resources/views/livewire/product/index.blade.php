@@ -18,12 +18,7 @@
         href={{ route('products.create') }}
         class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-white tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 mb-3">
         <i class="fas fa-plus mr-1"></i> New Product
-    </a>  
-    <a type="button" 
-        href={{ route('products.create') }}
-        class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-white tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 mb-3">
-        <i class="fas fa-plus mr-1"></i> bulk Product
-    </a>  
+    </a>      
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-5 mx-3 md:mx-0" wire:loading.class="invisible">
         @foreach ($products as $product)
