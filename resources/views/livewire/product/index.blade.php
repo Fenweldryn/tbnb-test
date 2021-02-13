@@ -21,7 +21,7 @@
     </a>      
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-5 mx-3 md:mx-0" wire:loading.class="invisible">
-        @foreach ($products as $product)
+        @forelse($products as $product)
           <div class="flex flex-wrap bg-white rounded-lg border-l-8 border-blue-800 w-full" wire:key="card-{{ $product->id }}">
             <div class="rounded-lg w-full">          
               <div class="w-full p-4">
@@ -54,7 +54,9 @@
                     </div>
                 </div>
           </div>          
-        @endforeach
+          @empty
+            No records found.
+        @endforelse
     </div>
     <div class='mt-5'>
         {{ $products->links() }}
