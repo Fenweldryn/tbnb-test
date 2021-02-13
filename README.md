@@ -1,6 +1,8 @@
 # TurnoverBnB - Fullstack
 ### The project is a stock management system.
 
+[how to deploy](#how-to-deploy)
+
 <b>The system should have these functionalities:</b>
 
 * Create a product
@@ -37,3 +39,12 @@ React Native with expo SDK 37 or later</br>
 * Backend tests
 * UI framework like vuetify, vue-bootstrap or etc
 * Application deployment
+
+## How to Deploy
+1. composer create-project
+2. npm install
+3. npm run dev
+4. create database and write it's name and credentials on .env file
+5. php artisan migrate
+6. php artisan serve
+7. access website at localhost:8000
