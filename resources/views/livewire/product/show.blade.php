@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <a href="#" onclick="window.history.back();" class="px-4 py-2 text-center border border-transparent bg-gray-100 text-gray-400 hover:bg-gray-200 hover:text-black font-bold rounded-lg mr-2">
+    <a href="{{ route('products') }}" class="px-4 py-2 text-center border border-transparent bg-gray-100 text-gray-400 hover:bg-gray-200 hover:text-black font-bold rounded-lg mr-2">
         <i class="mr-2 fas fa-arrow-left"></i> Back
     </a>
 
@@ -42,22 +42,26 @@
                     <h3 class="font-semibold text-xl text-gray-800 leading-tight mb-3">{{ \Carbon\Carbon::parse($log->created_at)->format('m/d/Y H:i:s') }}</h3>
                     <div>
                         <label for="name">Name</label>
-                        <input class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" readonly value="{{ $log->properties['attributes']['name'] }}">                    
+                        <input class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" readonly value="{{ $log->properties['old']['name'] }}">                    
                     </div>
         
                     <div class="mt-5">
                         <label for="price">Price</label>
-                        <input class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" readonly value="U$ {{ $log->properties['attributes']['price'] }}"> 
+                        <input class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" readonly value="U$ {{ $log->properties['old']['price'] }}"> 
                     </div>
         
                     <div class="mt-5">
                         <label for="quantity">Quantity</label>
-                    <input class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" readonly value="{{ $log->properties['attributes']['quantity'] }} units"> 
+                    <input class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" readonly value="{{ $log->properties['old']['quantity'] }} units"> 
                     </div>
                 </div>                
             @empty
                 <div class="w-full bg-white p-5 shadow-md rounded-lg mt-4">
                     <h3 class="font-semibold text-xl text-gray-800 leading-tight mb-3">No records found.</h3>
+                    <a class="px-4 transition duration-200 focus:shadow-sm focus:ring-4 focus:ring-opacity-50 text-white py-2.5 rounded-md text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block bg-blue-500 hover:bg-blue-600 focus-blue-700 focus:ring-blue-500" href="{{ route('products.edit', $product->slug) }}"> 
+                        <i class="fas fa-pencil-alt mr-2"></i>
+                        Make some changes
+                    </a>
                 </div>
             @endforelse
             
