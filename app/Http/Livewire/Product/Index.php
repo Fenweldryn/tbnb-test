@@ -18,4 +18,10 @@ class Index extends Component
             'products' => Product::orderBy('id', 'desc')->paginate($this->itemsShownPerPage)
         ]);
     }
+
+    public function seedProducts()
+    {
+        Product::factory()->count(20)->create();
+        $this->render();
+    }
 }
