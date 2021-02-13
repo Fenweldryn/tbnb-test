@@ -24,4 +24,11 @@ class Index extends Component
         Product::factory()->count(20)->create();
         $this->render();
     }
+
+    public function destroy($id)
+    {
+        Product::find($id)->delete();        
+        $this->render();
+    }
+    
 }

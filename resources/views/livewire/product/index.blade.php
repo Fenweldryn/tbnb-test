@@ -47,9 +47,9 @@
                
             <div class='w-full'>
                 <div class="p-4 flex space-x-4 self-end w-full">
-                    <a type="button" href="" class="w-1/2 px-4 py-3 text-center bg-gray-200 text-gray-400 hover:bg-red-600 hover:text-black font-bold rounded-lg disabled:opacity-50 disabled:cursor-default">
+                    <button type="button" onclick="confirm('Are you sure you want to delete?') || event.stopImmediatePropagation()" wire:click="destroy({{ $product->id }})" class="w-1/2 px-4 py-3 text-center bg-gray-200 text-gray-400 hover:bg-red-600 hover:text-black font-bold rounded-lg disabled:opacity-50 disabled:cursor-default">
                         <i class="fas fa-trash"></i>
-                    </a>
+                    </button>
                     <a type="button" href="{{ route('products.show', $product->slug) }}" class="w-1/2 px-4 py-3 text-center bg-gray-200 text-gray-400 hover:bg-yellow-400 hover:text-black font-bold rounded-lg disabled:opacity-50 disabled:cursor-default">
                         <i class="fas fa-history"></i>
                     </a>
