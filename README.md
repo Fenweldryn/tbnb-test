@@ -18,9 +18,6 @@
 * Price
 * Quantity
 
-## How to submit:
-Send an email to joao@turnoverbnb.com with the link of your repository
-
 
 ### The project must be done using the following technologies
 
